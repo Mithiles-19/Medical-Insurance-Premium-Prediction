@@ -1,4 +1,3 @@
-%%writefile app.py
 import streamlit as st
 import joblib
 import numpy as np
@@ -23,3 +22,4 @@ if st.button("Predict Premium"):
     input_data = np.array([[age, sex, bmi, children, smoker, region]])
     prediction = model.predict(input_data)[0]
     st.success(f"Estimated Premium: ${prediction:,.2f}")
+
